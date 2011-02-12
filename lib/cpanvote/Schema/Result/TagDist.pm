@@ -7,7 +7,7 @@ use base qw/DBIx::Class/;
 
 __PACKAGE__->load_components(qw/Core/);
 
-__PACKAGE__->table('TagDist');
+__PACKAGE__->table('tag_dist');
 
 __PACKAGE__->add_columns(
     tag_id => { data_type => 'integer', },

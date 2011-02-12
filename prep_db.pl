@@ -20,7 +20,7 @@ my $s = $schema->connect('dbi:SQLite:mydb.sql');
 
 my $dh = DBIx::Class::DeploymentHandler->new( {
         schema              => $s,
-        databases           => [qw/ SQLite PostgreSQL MySQL /],
+        databases           => [qw/ SQLite PostgreSQL /],
         sql_translator_args => { add_drop_table => 0, },
     } );
 

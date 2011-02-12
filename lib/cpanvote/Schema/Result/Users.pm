@@ -7,7 +7,7 @@ use base qw/DBIx::Class/;
 
 __PACKAGE__->load_components(qw/Core/);
 
-__PACKAGE__->table('Users');
+__PACKAGE__->table('users');
 
 __PACKAGE__->add_columns(
     id => {

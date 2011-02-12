@@ -9,7 +9,7 @@ use List::MoreUtils qw/ uniq /;
 
 __PACKAGE__->load_components(qw/Core/);
 
-__PACKAGE__->table('Distributions');
+__PACKAGE__->table('distributions');
 
 __PACKAGE__->add_columns(
     id => {

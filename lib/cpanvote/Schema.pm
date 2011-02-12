@@ -5,8 +5,12 @@ use warnings;
 
 use base qw/ DBIx::Class::Schema /;
 
-our $VERSION = 2;
+our $VERSION = 3;
 
 __PACKAGE__->load_namespaces;
 
 1;
+
+=head1 NAME
+
+cpanvote::Schema - DB schema for cpanvote web service

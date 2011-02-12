@@ -7,7 +7,7 @@ use base qw/DBIx::Class/;
 
 __PACKAGE__->load_components(qw/Core/);
 
-__PACKAGE__->table('Tags');
+__PACKAGE__->table('tags');
 
 __PACKAGE__->add_columns(
     id => { data_type => 'integer', 
@@ -27,7 +27,7 @@ __PACKAGE__->add_unique_constraint( unique_row => [ qw/ user_id name / ] );
 
 __PACKAGE__->belongs_to( user => 'cpanvote::Schema::Result::Users', 'user_id' );
 
-__PACKAGE__->has_many( 'disttags', 'cpanvote::Schema::Result::TagDist', 'tag_id' );
-__PACKAGE__->many_to_many( 'dists', 'disttags', 'dist' );
+__PACKAGE__->has_many( 'dist_tags', 'cpanvote::Schema::Result::TagDist', 'tag_id' );
+__PACKAGE__->many_to_many( 'dists', 'dist_tags', 'dist' );
 
 1;
