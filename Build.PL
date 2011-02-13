@@ -12,6 +12,8 @@ my $builder = Module::Build->new(
             DBIx::Class::TimeStamp
             DBIx::Class::Candy
             DateTime::Format::Pg
+            DBIx::Class::DeploymentHandler
+            DBD::Pg
         /,
     },
 );

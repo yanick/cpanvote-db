@@ -18,13 +18,8 @@ __PACKAGE__->add_columns(
     },
     distname => {
         data_type   => 'varchar',
-        size        => 30,
+        size        => 150,
         is_nullable => 0,
-    },
-       foo => {
-        data_type => 'varchar',
-        size => 30,
-        is_nullable => 1,
     },
 );
 __PACKAGE__->add_unique_constraint( unique_distname => ['distname'], );

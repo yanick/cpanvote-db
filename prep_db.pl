@@ -27,7 +27,7 @@ my $dh = DBIx::Class::DeploymentHandler->new( {
 say "generating deployment script";
 $dh->prepare_install;
 
-if ( $version > 9 ) {
+if ( $version > 0 ) {
     say "generating upgrade script";
     $dh->prepare_upgrade( {
             from_version => $version - 1,
